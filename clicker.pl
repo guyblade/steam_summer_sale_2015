@@ -96,9 +96,21 @@ while (1==1) {
 	}
 	if($cnt % 5 == 0 || $cnt == 1) {
 		respawn();
-		usleep(0.25e6);
-		move_random();
-		usleep(0.25e6);
+		usleep(1e6);
+
+		move_left();
+		click();
+		usleep(1e6);
+
+		move_bottom();
+		click();
+		usleep(1e6);
+
+		move_right();
+		click();
+		usleep(1e6);
+
+		move_top();
 	}
 	for(my $i = 0; $i < $cps; ++$i) {
 		click();
